@@ -2,7 +2,7 @@ def distance(a, b):
     return sum([(ai-bi)**2 for ai, bi in zip(a,b)])**.5
 
 
-def knn(new_data, data, y):
+def knn(new_data, data, y, k=1):
     return y[0]
 
 def knn_verbose(new_data, data, y, k=1):
