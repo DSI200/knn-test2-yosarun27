@@ -2,7 +2,7 @@ def distance(a, b):
     return sum([(ai-bi)**2 for ai, bi in zip(a,b)])**.5
 
 
-def knn_dump(new_data, data, y):
+def knn(new_data, data, y):
     return y[0]
 
 def knn_verbose(new_data, data, y, k=1):
@@ -18,7 +18,7 @@ def knn_verbose(new_data, data, y, k=1):
     print(result)
     return result
 
-def knn(new_data, data, y, k=1):
+def knn_good(new_data, data, y, k=1):
     idx = sorted(range(len(data)), key=lambda x: distance(new_data, data[x]))
     votes = [y[i] for i in idx[:k]]
     return max(votes, key=votes.count)
